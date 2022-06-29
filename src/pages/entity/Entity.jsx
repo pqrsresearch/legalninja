@@ -12,7 +12,7 @@ export default function Entity() {
         <Box>
             <Flex flexDir={"column"} gap="10" marginTop={10} >
                 <Input color={"white"} onChange={(e) => setLessee(e.target.value)} placeholder="Lessee" width="60%" />
-                <Input color={"white"} onChange={(e) => setAddress(e.target.value)} placeholder="Address" />
+                <Input color={"white"} onChange={(e) => setAddress(e.target.value)} placeholder="Address" width={"60%"} />
                 <Input color={"white"} onChange={(e) => setLessor(e.target.value)} placeholder="Lessor" width={"60%"} />
                 <Input color={"white"} onChange={(e) => setDate(e.target.value)} placeholder="DD/MM/YYYY" width={"60%"} />
                 <Input color={"white"} onChange={(e) => setAmount(e.target.value)} placeholder="$ Amount" width={"60%"} />
