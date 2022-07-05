@@ -2,14 +2,15 @@ import { Box, Flex, Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/reac
 import { useNavigate } from "react-router-dom";
 import { signinStore } from ".././store/signinStore";
 import React from "react";
+import "./Nav.css"
 
 export default function Nav() {
     const signin = signinStore(state => state.signin);
     const setSignin = signinStore(state => state.setSignin);
     const navigate = useNavigate();
     return (
-        <>
-            <Flex>
+        <Box id="noprint">
+            <Flex >
                 <Flex alignItems={"center"} justify="space-around" backgroundColor={"black"} color="white" width={"80%"} height={"8vh"}>
                     <Box>
                         Estate
@@ -54,6 +55,6 @@ export default function Nav() {
                     }
                 </Flex>
             </Flex>
-        </>
+        </Box>
     );
 }

@@ -1,6 +1,7 @@
 import { Box, Text, Center, Button } from "@chakra-ui/react";
 import React from "react";
 import { entityStore } from "../../store/entityStore"
+import "./documents.css";
 
 export default function Documents() {
     const lessee = entityStore(state => state.lessee)
@@ -75,7 +76,7 @@ export default function Documents() {
                     “Leasing" forms found in this category.
                 </Center>
             </Box>
-            <Button width={"40%"}>
+            <Button id="print-btn" width={"40%"} onClick={() => window.print()}>
                 Print
             </Button>
         </Box>

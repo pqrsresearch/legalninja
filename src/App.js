@@ -9,10 +9,10 @@ function App() {
     <Box backgroundColor={"black"}>
       <Nav />
       <Flex>
-      <Box width="40%">
+      <Box id={"wnoprint"} width="40%">
         <Entity />
       </Box>
-      <Box width="60%">
+      <Box id="print" width="60%">
         <Documents />
       </Box>
     </Flex>
