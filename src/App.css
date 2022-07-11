@@ -2,15 +2,6 @@
   text-align: center;
 }
 
-@media print {
-  #print {
-    width: 100%;
-  }
-  #wnoprint {
-    width: 0%;
-  }
-}
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
