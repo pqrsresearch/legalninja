@@ -4,6 +4,7 @@ import { Box, Flex, Progress, Button } from '@chakra-ui/react';
 import { agreementData } from "./data";
 import MCQuestion from "./components/agreement/mcquestion";
 import TxtQuestion from './components/agreement/txtQuestion';
+import { agreementStore } from "./store/agreementStore"
 
 function App() {
   let clauseToQuestionArray = {};
@@ -11,9 +12,12 @@ function App() {
     clauseToQuestionArray[agreementData["clauses"][i]["metadata"]["name"]] =
       agreementData["clauses"][i]["branches"][0]["questions"]
   }
-  console.log(clauseToQuestionArray)
   const [clause, setClause] = React.useState("General");
   const [progressVal, setProgressVal] = React.useState(15);
+  const setCopyOfAgreement = agreementStore(state => state.setCopyOfAgreement);
+  React.useEffect(() => {
+    setCopyOfAgreement(JSON.parse(JSON.stringify(agreementData)))
+  }, [])
   return (
     <>
       <Flex height="10vh" width="100vw" backgroundColor="ffff">
@@ -37,7 +41,7 @@ function App() {
         {/* <MCQuestion jsonData={agreementData} id={"c0_b0_q1"} /> */}
         <TxtQuestion questionData={clauseToQuestionArray[clause]}/>
       </Box>
-      <Button colorScheme={"green"}>{"Save & Next"}</Button>
+      <Button colorScheme={"green"} width={"120px"} margin={5} padding={1}>{"Save & Next"}</Button>
     </>
   );
 }

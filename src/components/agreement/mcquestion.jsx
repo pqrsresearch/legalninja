@@ -3,6 +3,10 @@ import { Box } from '@chakra-ui/react';
 import "../styles.css"
 
 export default function MCQuestion({jsonData, id}) {
+    const inputEl = React.useRef(null);
+    const onSel = () => {
+        console.log(inputEl.current.name)
+    }
     // "id": "c0_b0_q1"
     const parts = "c0_b0_q1".split("_")
     const clauseId = parseInt(parts[0].replace("c", ''));
@@ -31,7 +35,7 @@ export default function MCQuestion({jsonData, id}) {
                     {
                         j["options"].map((op, op_idx) => (
                             <Box border={"2px solid black"} borderRadius={10} width={"100px"} margin={5} padding={5} id={`option_div_${j["metadata"]["id"]}_${op_idx}`} class="label-div focused-input">
-                                <input value={`${op}`} type="radio" name={`option_val_${j["metadata"]["id"]}_${op_idx}`} id={`option_val_${j["metadata"]["id"]}_${op_idx}`} checked={op === j["recommended_resp"]} />
+                                <input onClick={onSel} ref={inputEl} value={`${op}`} type="radio" name={`option_val_${j["metadata"]["id"]}_${op_idx}`} id={`option_val_${j["metadata"]["id"]}_${op_idx}`} checked={op === j["recommended_resp"]} />
                                 <label id={`option_label_${j["metadata"]["id"]}_${op_idx}`} for={`option_val_${j["metadata"]["id"]}_${op_idx}`}>{ op }</label>
                             </Box>
                         ))
