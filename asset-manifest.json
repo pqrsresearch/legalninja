@@ -1,16 +1,15 @@
 {
   "files": {
-    "main.css": "/legalninja/static/css/main.192dcac2.css",
-    "main.js": "/legalninja/static/js/main.0412be3c.js",
-    "static/js/787.eb6f02f4.chunk.js": "/legalninja/static/js/787.eb6f02f4.chunk.js",
-    "static/media/home.jpg": "/legalninja/static/media/home.10201a0e4c94778db25b.jpg",
+    "main.css": "/legalninja/static/css/main.523fb0e2.css",
+    "main.js": "/legalninja/static/js/main.c345dd9b.js",
+    "static/js/787.fd9fac42.chunk.js": "/legalninja/static/js/787.fd9fac42.chunk.js",
     "index.html": "/legalninja/index.html",
-    "main.192dcac2.css.map": "/legalninja/static/css/main.192dcac2.css.map",
-    "main.0412be3c.js.map": "/legalninja/static/js/main.0412be3c.js.map",
-    "787.eb6f02f4.chunk.js.map": "/legalninja/static/js/787.eb6f02f4.chunk.js.map"
+    "main.523fb0e2.css.map": "/legalninja/static/css/main.523fb0e2.css.map",
+    "main.c345dd9b.js.map": "/legalninja/static/js/main.c345dd9b.js.map",
+    "787.fd9fac42.chunk.js.map": "/legalninja/static/js/787.fd9fac42.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.192dcac2.css",
-    "static/js/main.0412be3c.js"
+    "static/css/main.523fb0e2.css",
+    "static/js/main.c345dd9b.js"
   ]
 }
