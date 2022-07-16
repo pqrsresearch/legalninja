@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/legalninja/static/css/main.f99c0e9f.css",
-    "main.js": "/legalninja/static/js/main.16b8a3ff.js",
+    "main.js": "/legalninja/static/js/main.cfc8f39a.js",
     "static/js/787.fd9fac42.chunk.js": "/legalninja/static/js/787.fd9fac42.chunk.js",
     "static/media/Illustration.png": "/legalninja/static/media/Illustration.e56bba684ee92d0b2806.png",
     "index.html": "/legalninja/index.html",
     "main.f99c0e9f.css.map": "/legalninja/static/css/main.f99c0e9f.css.map",
-    "main.16b8a3ff.js.map": "/legalninja/static/js/main.16b8a3ff.js.map",
+    "main.cfc8f39a.js.map": "/legalninja/static/js/main.cfc8f39a.js.map",
     "787.fd9fac42.chunk.js.map": "/legalninja/static/js/787.fd9fac42.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f99c0e9f.css",
-    "static/js/main.16b8a3ff.js"
+    "static/js/main.cfc8f39a.js"
   ]
 }
