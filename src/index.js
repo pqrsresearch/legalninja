@@ -4,12 +4,29 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ChakraProvider } from '@chakra-ui/react'
+import { HashRouter, Route, Routes } from 'react-router-dom';
+import Login from './pages/login/Login';
+import Registration from './pages/registration/Registration';
+import Account from './pages/account/Account';
+import Home from './pages/home/Home';
+import Purchase from './pages/purchase/Purchase';
+import Setting from './pages/setting/Setting';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <ChakraProvider>
-    <App />
+    <HashRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="app" element={<App />} />
+          <Route path="register" element={<Registration />} />
+          <Route path="account" element={<Account />} />
+          <Route path="login" element={<Login />} />
+          <Route path="purchase" element={<Purchase />} />
+          <Route path="setting" element={<Setting />} />
+        </Routes>
+      </HashRouter>
     </ChakraProvider>
   </React.StrictMode>
 );

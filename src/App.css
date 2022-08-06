@@ -36,3 +36,26 @@
     transform: rotate(360deg);
   }
 }
+
+#saveBtn {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  font-family: 'Open Sans',sans-serif;
+  text-decoration: none;
+  outline: none;
+  position: relative;
+  overflow: visible;
+  margin: 0;
+  vertical-align: middle;
+  white-space: nowrap;
+  cursor: pointer;
+  display: inline-block;
+  -webkit-appearance: none;
+  background: #64ad7d;
+  font-size: 22px;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 1px 1px 1px 0.75px #cecece;
+}

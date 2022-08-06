@@ -1,14 +1,16 @@
 import React from "react";
-import { Box, Text, Radio, RadioGroup, useRadio, useRadioGroup, HStack } from '@chakra-ui/react';
+import { Box, Text, Radio, RadioGroup, useRadio, useRadioGroup, HStack, Flex, Button, Tooltip } from '@chakra-ui/react';
+import { InfoIcon } from '@chakra-ui/icons'
 import { agreementStore } from "../../store/agreementStore"
+import "../styles.css"
 
 export default function TxtQuestion({ questionData }) {
     const copyOfAgreement = agreementStore(state => state.copyOfAgreement);
     console.log(questionData)
-    const handleRadio = (val) => {
-        const dejoin = val.split("-")
-        val = dejoin[0]
-        let id = dejoin[1]
+    const handleRadio = (val, id) => {
+        // const dejoin = val.split("-")
+        // val = dejoin[0]
+        // let id = dejoin[1]
         const parts = id.split("_")
         const clauseId = parseInt(parts[0].replace("c", ''));
         const branchId = parseInt(parts[1].replace("b", ''));
@@ -29,7 +31,7 @@ export default function TxtQuestion({ questionData }) {
                             <Text>{questionData[i]["question"]}</Text>
                         </Box>
                         <Box>
-                            <HStack {...group}>
+                            {/* <HStack {...group}>
                                 {questionData[i]["options"].map((value) => {
                                     const j = questionData[i]["metadata"]["id"];
                                     value = value + "-" + j
@@ -40,16 +42,32 @@ export default function TxtQuestion({ questionData }) {
                                         </RadioCard>
                                     )
                                 })}
-                            </HStack>
-                            {/* <RadioGroup onChange={(val) => handleRadio(val, questionData[i]["metadata"]["id"])}>
+                            </HStack> */}
+                            <RadioGroup onChange={(val) => handleRadio(val, questionData[i]["metadata"]["id"])}>
                                 {
 
-                                    questionData[i]["options"].map((op) => (
-                                        <Radio value={op} cursor={"pointer"} border={"2px solid green"} width={"120px"} margin={5} padding={1}
-                                        >{op}</Radio>
+                                    questionData[i]["options"].map((op, op_idx) => (
+                                        <>
+                                            <Radio value={op} cursor={"pointer"} border={"2px solid green"} width={"120px"} margin={5} padding={1}
+                                            >
+                                                <Box position={"relative"} id="radio" display={"flex"} justifyContent="center">
+                                                    <Flex width={"100%"} justifyItems={"center"} justify="center">
+                                                        {op}
+                                                    </Flex>
+                                                </Box>
+
+                                            </Radio>
+                                            {/* <Tooltip hasArrow label={questionData[i]["options_tooltip"][op_idx]} bg='red.600' placement="top">
+                                                <span><InfoIcon /></span>
+                                            </Tooltip> */}
+                                            <Tooltip hasArrow label="xxxxxx" bg='red.600' placement="top">
+                                                <span><InfoIcon /></span>
+                                            </Tooltip>
+                                        </>
+
                                     ))
                                 }
-                            </RadioGroup> */}
+                            </RadioGroup>
                         </Box>
                     </Box>
                 ))
